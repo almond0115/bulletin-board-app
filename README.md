@@ -51,3 +51,12 @@
     ```
     $ GRANT ALL PRIVILEGES on *.* TO 'nero_coding'@'%' WITH GRANT OPTION;
     ```
+
+### git 설정 
+
+1. `.git` 에서 이전에 버전으로 관리했었던 파일을 삭제하는 방법
+    ```
+    git rm --cached <관리하지 않고자 하는 파일의 경로>
+
+    예시) git rm --cached src/main/resources/application.properties
+    ```
