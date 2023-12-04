@@ -17,13 +17,12 @@ const BoardReadContainer = () => {
             setBoard(data);
         } catch (e) {
             console.log(e);
-            setBoard(null);
         }
     }
 
     useEffect( () => {
         getBoard()
-    }, [no])
+    }, [])
 
     return <BoardRead no={no} board={board} />
 }
