@@ -15,6 +15,8 @@
 
 ### 단축키
 1. Spring Boot Snippets 확장팩 설치 후 `rafce` (React Snippets)
+2. RequestMapping 요청의 GetMapping 경로 자동 설정 `sp-crud` (Spring Code Generator)
+3. 다중 커서 후 다중 삭제 `option` -> `shift + 화살표`
 
 ### 스프링 확장 필수 설치 목록 (설치 후 `개발 창 다시 로드`)
 1. Spring Initializr Java Support
