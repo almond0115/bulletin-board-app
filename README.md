@@ -23,6 +23,7 @@
 2. Spring Boot Extension Pack
 3. Spring Boot Developer Extension Pack
 4. Spring Code Generator
+5. Thunder Client (Request test)
 
 ### mysql 설정 
 
