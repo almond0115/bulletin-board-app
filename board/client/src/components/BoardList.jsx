@@ -17,7 +17,7 @@ const BoardList = ({ boardList }) => {
                 </thead>
                 <tbody>
                     {boardList.map((board) => (
-                        <tr>
+                        <tr key={board.no}>
                             <td align='center'>{board.no}</td>
                             <td align='left'>
                                 <Link to={`/boards/${board.no}`}> ${board.title} </Link>

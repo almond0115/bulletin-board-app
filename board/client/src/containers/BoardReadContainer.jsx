@@ -1,18 +1,31 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
+import * as boards from '../apis/boards'
+import BoardRead from '../components/BoardRead'
 
 // 게시글 조회
 const BoardReadContainer = () => {
     const { no } = useParams()
-    return (
-    <div>
-        <h1>게시글 조회</h1>
-        <h3> 번호 : {no} </h3>
-        <Link to="/boards">목록</Link>
-        <hr />
-        <Link to={`"/boards/update/${no}"`}>수정</Link>
-    </div>
-    )
+
+    const [board, setBoard] = useState({});
+
+    const getBoard = async () => {
+        try {
+            const response = await boards.select(no);
+            const data = response.data;
+            console.log(data);
+            setBoard(data);
+        } catch (e) {
+            console.log(e);
+            setBoard(null);
+        }
+    }
+
+    useEffect( () => {
+        getBoard()
+    }, [no])
+
+    return <BoardRead no={no} board={board} />
 }
 
 export default BoardReadContainer
